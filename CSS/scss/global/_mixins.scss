@@ -1,0 +1,28 @@
+@use "variabels" as *;
+
+@mixin maxMobile {
+  @media (max-width: $max-mobile) {
+    @content;
+  }
+}
+
+@mixin minMedium {
+  @media (min-width: $min-medium) {
+    @content;
+  }
+}
+
+@mixin maxMedium {
+  @media (max-width: $max-medium) {
+    @content;
+  }
+}
+
+@mixin overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+}

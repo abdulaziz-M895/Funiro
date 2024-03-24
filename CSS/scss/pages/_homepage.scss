@@ -1,0 +1,199 @@
+@use "../global" as *;
+@use "../components" as c;
+@use "../layout" as l;
+
+.discover {
+  background: url(../../../images/background1.png) center center,
+    0% 0% / cover no-repeat lightgray;
+  position: relative;
+  height: rem(717);
+  .box {
+    position: absolute;
+    padding: rem(30);
+    top: 50%;
+    right: rem(20);
+    transform: translate(0, -50%);
+    background-color: #fff3e3;
+    border-radius: rem(10);
+    width: rem(550);
+    z-index: 2;
+    @include maxMobile {
+      padding: rem(20);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(315);
+    }
+    p.new {
+      color: #333;
+      font-weight: 600;
+      letter-spacing: rem(3);
+      margin-left: rem(10);
+      margin-bottom: rem(5);
+    }
+    h1 {
+      color: var(--Primary, #b88e2f);
+      font-size: rem(52);
+      font-weight: 700;
+      line-height: rem(65);
+      max-width: rem(400);
+      margin: 0 0 rem(15) rem(8);
+      @include maxMobile {
+        font-size: rem(40);
+        line-height: rem(50);
+      }
+    }
+    p.lorem {
+      color: #333;
+      font-size: rem(18);
+      font-weight: 500;
+      line-height: rem(24);
+      margin: 0 0 0 rem(10);
+    }
+  }
+}
+.browse {
+  .browse-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: var(--Font-Color, #333);
+      font-size: rem(32);
+      font-weight: 700;
+      margin: rem(40) 0 0;
+      @include maxMobile {
+        font-size: rem(30);
+      }
+    }
+    p {
+      color: var(--Font-Color1, #666);
+      text-align: center;
+      font-size: rem(20);
+      font-weight: 400;
+      margin-bottom: rem(30);
+      @include maxMobile {
+        font-size: rem(15);
+      }
+    }
+  }
+  .browse-main {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    @include maxMobile {
+      flex-direction: column;
+    }
+    .browse-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(20);
+      margin: auto;
+      width: calc(90% / 3);
+      @include maxMobile {
+        width: 96%;
+      }
+      .img {
+        width: 100%;
+        background: url(../../../images/image106.png),
+          lightgray 50% / cover no-repeat;
+        height: rem(480);
+        border-radius: rem(10);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .img-2 {
+        background-image: url(../../../images/image100.png);
+      }
+      .img-3 {
+        background-image: url(../../../images/image101.png);
+      }
+      p {
+        color: var(--Font-Color, #333);
+        text-align: center;
+        font-size: rem(24);
+        font-weight: 600;
+      }
+    }
+  }
+}
+.products {
+  h1 {
+    color: var(--Color-Gray-1, #3a3a3a);
+    text-align: center;
+    font-size: rem(40);
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(15);
+    .product {
+      width: rem(350);
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .discount {
+        background-color: #e97171;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: rem(15);
+        right: rem(15);
+        border-radius: 50%;
+        width: rem(48);
+        height: rem(48);
+        color: var(--Color-White, #fff);
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 150%;
+        &.new {
+          background-color: #2EC1AC;
+        }
+      }
+      .text {
+        padding: rem(20) rem(17) rem(35);
+        background-color: #f4f5f7;
+        margin-top: rem(-4.5);
+        p.title {
+          color: var(--Color-Gray-1, #3a3a3a);
+          font-size: rem(24);
+          font-weight: 600;
+          line-height: 120%; /* 28.8px */
+          margin: 0;
+        }
+        p.des {
+          color: var(--Color-Gray-3, #898989);
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 150%; /* 24px */
+          margin: rem(7) 0;
+        }
+        p.price-after {
+          color: var(--Color-Gray-1, #3a3a3a);
+          font-size: rem(20);
+          font-weight: 600;
+          line-height: 150%; /* 30px */
+          margin: 0 rem(15) 0 0;
+          display: inline-block;
+        }
+        p.price-before {
+          color: var(--Color-Gray-4, #b0b0b0);
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+          text-decoration: line-through;
+          margin: 0;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
