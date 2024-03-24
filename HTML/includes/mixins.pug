@@ -1,0 +1,24 @@
+mixin product(imgsrc, discount, title, des, pAfter, pBefore)
+  .product
+    img(src=`${imgsrc}`, alt="alt")
+    - if(discount != "none" && discount == "new")
+      .discount.new New
+    - else if(discount != "none" && discount == "d50")
+      .discount.d50 50%
+    - else 
+      .discount
+    .text
+      p.title #{title}
+      p.des #{des}
+      p.price-after #{pAfter}
+      - if(pBefore != "none")
+        p.price-before #{pBefore}
+    .overlay-main
+      .button Add to cart
+      .impresions
+        .share Share
+          img(src="../images/gridicons_share.svg", alt="alt")
+        .compare Compare
+          img(src="../images/compare-svgrepo-com1.svg", alt="alt")
+        .like Like
+          img(src="../images/Heart.svg", alt="alt")

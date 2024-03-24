@@ -9,9 +9,10 @@ a.main-button {
   margin: rem(25) 0 0 rem(10);
   cursor: pointer;
   border: none;
+  color: white;
+  width: fit-content;
+  font-weight: 700;
   p {
-    color: #fff;
-    font-weight: 700;
     margin: 0;
   }
 }

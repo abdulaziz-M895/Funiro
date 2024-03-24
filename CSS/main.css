@@ -1,6 +1,5 @@
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+html {
+  font-size: 100%;
 }
 
 body {
@@ -35,10 +34,13 @@ a.main-button {
   margin: 1.5625rem 0 0 0.625rem;
   cursor: pointer;
   border: none;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
 }
 a.main-button p {
-  color: #fff;
-  font-weight: 700;
   margin: 0;
 }
 
@@ -172,7 +174,7 @@ header .head .sections {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  gap: 1.75rem;
+  gap: 4rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -182,7 +184,7 @@ header .head .sections {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    gap: 0.75rem;
+    gap: 1.75rem;
   }
 }
 header .head .sections .section {
@@ -507,11 +509,15 @@ footer .content .newsletter form input:not(#email) {
   width: 21.875rem;
   position: relative;
 }
+@media (max-width: 991px) {
+  .products .content .product {
+    width: 20.75rem;
+  }
+}
 .products .content .product img {
   width: 100%;
 }
 .products .content .product .discount {
-  background-color: #e97171;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,7 +539,10 @@ footer .content .newsletter form input:not(#email) {
   line-height: 150%;
 }
 .products .content .product .discount.new {
-  background-color: #2EC1AC;
+  background-color: #2ec1ac;
+}
+.products .content .product .discount.d50 {
+  background-color: #e97171;
 }
 .products .content .product .text {
   padding: 1.25rem 1.0625rem 2.1875rem;
@@ -570,4 +579,178 @@ footer .content .newsletter form input:not(#email) {
   text-decoration: line-through;
   margin: 0;
   display: inline-block;
+}
+.products .more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.25rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #b88e2f;
+  border: 2px solid #b88e2f;
+  font-weight: 700;
+  width: 15.3125rem;
+  height: 3.125rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.products .more:hover {
+  color: white;
+  background-color: #b88e2f;
+}
+
+.beutiful {
+  position: relative;
+  padding: 2.5rem 0;
+  background-color: #fcf8f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.875rem;
+}
+@media (max-width: 767px) {
+  .beutiful {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.beutiful .text {
+  width: 31.25rem;
+  margin: 0 0 0 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 767px) {
+  .beutiful .text {
+    width: 22.5rem;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+.beutiful .text h1 {
+  color: var(--Color-Gray-1, #3a3a3a);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .beutiful .text h1 {
+    font-size: 2.3125rem;
+  }
+}
+.beutiful .text p {
+  color: var(--Color-Gray-2, #616161);
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+@media (max-width: 767px) {
+  .beutiful .text p {
+    font-size: 0.96875rem;
+  }
+}
+@media (max-width: 767px) {
+  .beutiful .text a {
+    margin: 0.625rem auto 0;
+  }
+}
+.beutiful .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75%;
+  gap: 0.9375rem;
+  overflow: hidden;
+}
+.beutiful .images .image-1 {
+  min-width: 25.25rem;
+  height: 35.125rem;
+  background-image: url(../../../images/Rectangle1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.beutiful .images .image-2-con {
+  height: 35.125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .beutiful .images .image-2-con {
+    display: none;
+  }
+}
+.beutiful .images .image-2-con .img {
+  width: 18.75rem;
+  height: 29.125rem;
+  background-image: url(../../../images/Rectangle2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.beutiful .images .image-2-con .ellipses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+.beutiful .images .image-3 {
+  width: 5rem;
+  height: 29.125rem;
+  background-image: url(../../../images/Rectangle3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }

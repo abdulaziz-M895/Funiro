@@ -1,10 +1,13 @@
+include ./includes/mixins
+
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     block titleName
-      title Furniro 
+      title Funiro 
+    <link rel="icon" type="image/png" href="../images/Meubel House_Logos-05.png">
     link(rel="stylesheet", href="../../CSS/all.min.css")
     link(rel="stylesheet", href="../../CSS/bootstrap.min.css")
     link(rel="stylesheet", href="../../CSS/main.css")
@@ -21,8 +24,8 @@ html(lang="en")
           .sections 
             a.section(href="./index.html") Home
             a.section(href="./shop.html") Shop
-            a.section(href="./about.html") About
             a.section(href="./contact.html") Contact
+            a.section(href="./blog.html") Blog
           .icons-container
             img(src="../images/mdi_account-alert-outline.svg", alt="alt")
             img(src="../images/akar-icons_search.svg", alt="alt")
@@ -55,72 +58,25 @@ html(lang="en")
         .container 
           h1 Our Products
           .content 
-            .product
-              img(src="../images/image1.png", alt="alt")
-              .text
-                p.title Syltherine
-                p.des Stylish cafe table set
-                p.price-after EGP 13.999
-                p.price-before EGP 20.000
-              .overlay-main
-                .button Add to cart
-                .impresions
-                  .share Share
-                    img(src="../images/gridicons_share.svg", alt="alt")
-                  .compare Compare
-                    img(src="../images/compare-svgrepo-com1.svg", alt="alt")
-                  .like Like
-                    img(src="../images/Heart.svg", alt="alt")
-            .product
-              img(src="../images/image2.png", alt="alt")
-              .text
-                p.title Liveosa
-                p.des Stylish cafe chair
-                p.price-after EGP EGP 1.499
-                //- p.price-before EGP 20.000
-              .overlay-main
-                .button Add to cart
-                .impresions
-                  .share Share
-                    img(src="../images/gridicons_share.svg", alt="alt")
-                  .compare Compare
-                    img(src="../images/compare-svgrepo-com1.svg", alt="alt")
-                  .like Like
-                    img(src="../images/Heart.svg", alt="alt")
-            .product
-              img(src="../images/image3.png", alt="alt")
-              .discount 50%
-              .text
-                p.title Lolito
-                p.des Luxury big sofa
-                p.price-after EGP EGP 14.999
-                p.price-before EGP 20.000
-              .overlay-main
-                .button Add to cart
-                .impresions
-                  .share Share
-                    img(src="../images/gridicons_share.svg", alt="alt")
-                  .compare Compare
-                    img(src="../images/compare-svgrepo-com1.svg", alt="alt")
-                  .like Like
-                    img(src="../images/Heart.svg", alt="alt")
-            .product
-              img(src="../images/image4.png", alt="alt")
-              .discount.new New
-              .text
-                p.title Respire
-                p.des Outdoor bar table and stool
-                p.price-after EGP EGP 14.999
-                p.price-before EGP 20.000
-              .overlay-main
-                .button Add to cart
-                .impresions
-                  .share Share
-                    img(src="../images/gridicons_share.svg", alt="alt")
-                  .compare Compare
-                    img(src="../images/compare-svgrepo-com1.svg", alt="alt")
-                  .like Like
-                    img(src="../images/Heart.svg", alt="alt")
+            +product("../images/image1.png", "new", "Syltherine", "Stylish cafe table set", "EGP 14.000", "none")
+            +product("../images/image2.png", "none", "Liveosa", "Stylish cafe chair", "EGP 1.500", "none")
+            +product("../images/image3.png", "d50", "Lolito", "Luxury big sofa", "EGP 10.000", "EGP 20.000")
+            +product("../images/image4.png", "new", "Respire", "Outdoor bar table and stool", "EGP 28.000", "none")
+            +product("../images/image5.png", "none", "Grifo", "Night Lamp", "EGP 699", "none")
+            +product("../images/image6.png", "new", "Muggo", "Luxury sofa", "EGP 20.000", "none")
+            +product("../images/image7.png", "d50", "Pingky", "Light Gray Luxury sofa", "EGP 10.500", "EGP 21.000")
+            +product("../images/image8.png", "new", "Potty", "Orange Luxury sofa", "EGP 25.000", "none")
+          .more Show More
+      .beutiful
+        .text 
+          h1 50+ Beautiful rooms inspiration
+          p Our designer already made a lot of beautiful prototipe of rooms that inspire you
+          a.main-button(href="#") Explore More
+        .images 
+          .image-1
+          .image-2-con
+            .img
+          .image-3
     footer 
       .container 
         .content 
