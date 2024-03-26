@@ -1,12 +1,14 @@
 @use "../global" as *;
 
 footer {
+  border-top: 1px solid #9f9f9f;
+  margin-top: rem(30);
   .content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin: auto;
-    padding: rem(30) 0;
+    padding: rem(40) 0;
     flex-wrap: wrap;
     @include maxMobile {
       text-align: center;
@@ -26,6 +28,7 @@ footer {
         color: black;
         font-size: rem(24);
         font-weight: 700;
+        transition: 0.3s;
       }
       p {
         color: #9f9f9f;
@@ -47,6 +50,7 @@ footer {
         padding: rem(12) 0;
         color: #000;
         width: 100%;
+        transition: 0.3s;
       }
     }
     .newsletter {
@@ -80,5 +84,13 @@ footer {
         }
       }
     }
+    a:hover {
+      color: var(--main-color);
+    }
+  }
+  .copy {
+    padding-top: 20px;
+    border-top: 1px solid #9f9f9f;
+    text-align: center;
   }
 }

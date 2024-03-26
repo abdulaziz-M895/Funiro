@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgb(184, 142, 47);
+}
+
 html {
   font-size: 100%;
 }
@@ -221,6 +225,10 @@ header .head .icons-container img {
   cursor: pointer;
 }
 
+footer {
+  border-top: 1px solid #9f9f9f;
+  margin-top: 1.875rem;
+}
 footer .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,7 +240,7 @@ footer .content {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: auto;
-  padding: 1.875rem 0;
+  padding: 2.5rem 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -257,6 +265,8 @@ footer .content .left a {
   color: black;
   font-size: 1.5rem;
   font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 footer .content .left p {
   color: #9f9f9f;
@@ -289,6 +299,8 @@ footer .content .help a {
   padding: 0.75rem 0;
   color: #000;
   width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media (max-width: 767px) {
   footer .content .newsletter {
@@ -330,6 +342,14 @@ footer .content .newsletter form input#email {
 }
 footer .content .newsletter form input:not(#email) {
   font-weight: 500;
+}
+footer .content a:hover {
+  color: var(--main-color);
+}
+footer .copy {
+  padding-top: 20px;
+  border-top: 1px solid #9f9f9f;
+  text-align: center;
 }
 
 .discover {
@@ -753,4 +773,21 @@ footer .content .newsletter form input:not(#email) {
   background-image: url(../../../images/Rectangle3.png);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.funiro-hash h2 {
+  color: var(--Color-Gray-2, #616161);
+  margin-bottom: 0.3125rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+.funiro-hash h1 {
+  color: var(--Color-Gray-1, #3a3a3a);
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
 }
