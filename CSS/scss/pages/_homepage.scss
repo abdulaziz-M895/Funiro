@@ -316,6 +316,7 @@
   }
 }
 .funiro-hash {
+  padding: rem(25) 0;
   h2 {
     color: var(--Color-Gray-2, #616161);
     margin-bottom: rem(5);
@@ -323,6 +324,9 @@
     font-size: rem(20);
     font-weight: 600;
     line-height: 150%;
+    @include maxMobile {
+      font-size: 0.85rem;
+    }
   }
   h1 {
     color: var(--Color-Gray-1, #3a3a3a);
@@ -331,5 +335,8 @@
     font-size: rem(40);
     font-weight: 700;
     line-height: 120%; /* 48px */
+    @include maxMobile {
+      font-size: 1.7rem;
+    }
   }
 }

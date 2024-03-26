@@ -122,6 +122,49 @@ a.main-button p {
   margin-left: 0.375rem;
 }
 
+.overlay-header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.page-header {
+  background-image: url(../../../images/skyler-smith-hNimGcj8pWE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+}
+.page-header h2,
+.page-header h4 {
+  position: relative;
+  z-index: 2;
+}
+.page-header h4 {
+  font-size: calc(0.5rem + 0.9vw);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page-header h4 span:first-of-type {
+  margin: 0 0.4375rem;
+  font-size: 1.6875rem;
+}
+.page-header h4 span:last-child {
+  font-weight: 300;
+}
+
 header .head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,6 +818,9 @@ footer .copy {
   background-repeat: no-repeat;
 }
 
+.funiro-hash {
+  padding: 1.5625rem 0;
+}
 .funiro-hash h2 {
   color: var(--Color-Gray-2, #616161);
   margin-bottom: 0.3125rem;
@@ -783,6 +829,11 @@ footer .copy {
   font-weight: 600;
   line-height: 150%;
 }
+@media (max-width: 767px) {
+  .funiro-hash h2 {
+    font-size: 0.85rem;
+  }
+}
 .funiro-hash h1 {
   color: var(--Color-Gray-1, #3a3a3a);
   margin-top: 0;
@@ -790,4 +841,9 @@ footer .copy {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 120%; /* 48px */
+}
+@media (max-width: 767px) {
+  .funiro-hash h1 {
+    font-size: 1.7rem;
+  }
 }

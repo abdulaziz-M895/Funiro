@@ -1,0 +1,27 @@
+@use "../global" as *;
+.page-header {
+  background-image: url(../../../images/skyler-smith-hNimGcj8pWE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: rem(80) 0;
+  text-align: center;
+  position: relative;
+  h2,
+  h4 {
+    position: relative;
+    z-index: 2;
+  }
+  h4 {
+    font-size: calc(0.5rem + 0.9vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span:first-of-type {
+      margin: 0 rem(7);
+      font-size: rem(27);
+    }
+    span:last-child {
+      font-weight: 300;
+    }
+  }
+}
