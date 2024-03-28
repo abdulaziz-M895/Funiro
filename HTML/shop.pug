@@ -7,14 +7,24 @@ block content
   +pageHeader("Shop")
   .shop-products 
     .options 
-      .container
-        .filter-options.d-flex.align-items-center.gap-5
+      .container.d-flex.align-items-center.justify-content-between
+        .filter-options.d-flex.align-items-center.gap-4
           .filter.d-flex.align-items-center.justify-center.gap-2
             img(src="../images/system-uicons_filtering.svg", alt="alt")
             p.m-0 Filter
           img(src="../images/ci_grid-big-round.svg", alt="alt")
           img(src="../images/bi_view-list.svg", alt="alt")
-        .show.d-flex.align-items-center
+          p.m-0 Showing 1-16 of 32 results
+        .show-options.d-flex.align-items-center
+          .show-box Show
+            select#show(name="show") 
+              - for(let i = 16; i <= 32; i++)
+                option(value=`${i}`) #{i}
+          .sort.ms-3 Sort By
+            select#sort(name="sort")
+              option(value="Default") Default
+              option(value="highToLow") Price: High to low
+              option(value="lowToHigh") Price: Low to high
     .container
       .content.d-flex.align-items-center.position-relative.flex-wrap
         - for(let i = 0; i < 4; i++)

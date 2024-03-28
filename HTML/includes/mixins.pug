@@ -26,5 +26,5 @@ mixin product($imgsrc, $discount, $title, $des, $pAfter, $pBefore)
 mixin pageHeader($title)
   .page-header
     h2 #{$title}
-    h4 Home #[span &gt;] #[span #{$title}]
+    h4 #[a(href="./index.html") Home] #[span &gt;] #[span #{$title}]
     .overlay-header

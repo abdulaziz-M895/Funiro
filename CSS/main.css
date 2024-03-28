@@ -1,5 +1,6 @@
 :root {
   --main-color: rgb(184, 142, 47);
+  --alt-color: #f9f1e7;
 }
 
 html {
@@ -156,6 +157,9 @@ a.main-button p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.page-header h4 a {
+  color: var(--main-color);
 }
 .page-header h4 span:first-of-type {
   margin: 0 0.4375rem;
@@ -860,11 +864,24 @@ footer .copy {
 }
 
 .options {
-  background-color: #F9F1E7;
+  background-color: #f9f1e7;
   padding: 1.5625rem 0;
 }
+.options .filter-options .filter {
+  margin-left: 1.6875rem;
+}
 .options .filter-options .filter p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+}
+.options .filter-options > p {
+  border-left: 0.09375rem solid #9F9F9F;
+  padding-left: 1.25rem;
+  height: 100%;
+}
+.options .sort select {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .shop-products .content {

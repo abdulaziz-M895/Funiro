@@ -21,18 +21,48 @@
     </header>
     <div class="page-header">
       <h2>Shop</h2>
-      <h4>Home <span>&gt;</span> <span>Shop</span></h4>
+      <h4><a href="./index.html">Home</a> <span>&gt;</span> <span>Shop</span></h4>
       <div class="overlay-header"></div>
     </div>
     <div class="shop-products"> 
       <div class="options"> 
-        <div class="container">
-          <div class="filter-options d-flex align-items-center gap-5">
+        <div class="container d-flex align-items-center justify-content-between">
+          <div class="filter-options d-flex align-items-center gap-4">
             <div class="filter d-flex align-items-center justify-center gap-2"><img src="../images/system-uicons_filtering.svg" alt="alt">
               <p class="m-0">Filter</p>
             </div><img src="../images/ci_grid-big-round.svg" alt="alt"><img src="../images/bi_view-list.svg" alt="alt">
+            <p class="m-0">Showing 1-16 of 32 results</p>
           </div>
-          <div class="show d-flex align-items-center"></div>
+          <div class="show-options d-flex align-items-center">
+            <div class="show-box">Show
+              <select id="show" name="show"> 
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+              </select>
+            </div>
+            <div class="sort ms-3">Sort By
+              <select id="sort" name="sort">
+                <option value="Default">Default</option>
+                <option value="highToLow">Price: High to low</option>
+                <option value="lowToHigh">Price: Low to high</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container">

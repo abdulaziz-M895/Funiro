@@ -16,6 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    a {
+      color: var(--main-color);
+    }
     span:first-of-type {
       margin: 0 rem(7);
       font-size: calc(1rem + 0.9vw);
