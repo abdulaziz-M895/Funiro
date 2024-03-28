@@ -5,3 +5,20 @@ block titleName
 
 block content
   +pageHeader("Shop")
+  .shop-products 
+    .options 
+      .container
+        .filter-options.d-flex.align-items-center.gap-5
+          .filter.d-flex.align-items-center.justify-center.gap-2
+            img(src="../images/system-uicons_filtering.svg", alt="alt")
+            p.m-0 Filter
+          img(src="../images/ci_grid-big-round.svg", alt="alt")
+          img(src="../images/bi_view-list.svg", alt="alt")
+        .show.d-flex.align-items-center
+    .container
+      .content.d-flex.align-items-center.position-relative.flex-wrap
+        - for(let i = 0; i < 4; i++)
+          +product("../images/image1.png", "new", "Syltherine", "Stylish cafe table set", "EGP 14.000", "none")
+          +product("../images/image2.png", "none", "Liveosa", "Stylish cafe chair", "EGP 1.500", "none")
+          +product("../images/image3.png", "d50", "Lolito", "Luxury big sofa", "EGP 10.000", "EGP 20.000")
+          +product("../images/image4.png", "new", "Respire", "Outdoor bar table and stool", "EGP 28.000", "none")

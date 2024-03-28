@@ -18,7 +18,7 @@
     justify-content: center;
     span:first-of-type {
       margin: 0 rem(7);
-      font-size: rem(27);
+      font-size: calc(1rem + 0.9vw);
     }
     span:last-child {
       font-weight: 300;

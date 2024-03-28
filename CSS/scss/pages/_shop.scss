@@ -1,0 +1,19 @@
+@use "../global" as *;
+.options {
+  background-color: #F9F1E7;
+  padding: rem(25) 0;
+  .filter-options {
+    .filter {
+      p {
+        font-size: rem(20);
+      }
+    }
+  }
+}
+.shop-products {
+  .content {
+  margin-top: 20px;
+    justify-content: center;
+    gap: 15px;
+  }
+}
