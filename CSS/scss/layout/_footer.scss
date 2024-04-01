@@ -79,7 +79,8 @@ footer {
           width: 200px;
           font-weight: 400;
         }
-        input:not(#email) {
+        button {
+          @extend input;
           font-weight: 500;
         }
       }

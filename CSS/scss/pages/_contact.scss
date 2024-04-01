@@ -1,0 +1,60 @@
+@use "../global" as *;
+
+.contact-page {
+  .heading {
+    p {
+      margin: auto;
+      color: #9f9f9f;
+      max-width: rem(700);
+    }
+  }
+  .content {
+    justify-content: space-around !important;
+    .details {
+      @include maxMedium {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-bottom: rem(20);
+        .box {
+          flex-direction: column;
+          text-align: center;
+          margin-top: 0 !important;
+        }
+      }
+      @include maxMobile {
+        flex-direction: column;
+      }
+      img {
+        scale: 1.2;
+        @include minMedium {
+          align-self: flex-start;
+          margin-top: rem(10);
+        }
+      }
+    }
+    .form {
+      width: 45%;
+      @include maxMedium {
+        width: 100%;
+      }
+      input,
+      textarea {
+        width: 100%;
+        outline: none;
+      }
+      textarea {
+        resize: none;
+        height: rem(220);
+      }
+      button {
+        padding: 1.2rem 4.5rem;
+        border-radius: rem(10);
+        margin-inline: 0;
+        @include maxMedium {
+          margin-inline: calc(50% - 100px);
+        }
+      }
+    }
+  }
+}

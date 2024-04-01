@@ -61,18 +61,3 @@
     }
   }
 }
-.pros {
-  background-color: var(--alt-color);
-  margin-bottom: rem(-30);
-  .pro:not(:first-child) {
-    width: rem(272);
-  }
-  .pro {
-    @include maxMobile {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  }
-}

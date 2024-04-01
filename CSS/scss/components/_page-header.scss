@@ -6,7 +6,15 @@
   padding: rem(80) 0;
   text-align: center;
   position: relative;
-  h2,
+  img {
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(10);
+    @include maxMobile {
+      scale: 0.7;
+    }
+  }
+  h1,
   h4 {
     position: relative;
     z-index: 2;

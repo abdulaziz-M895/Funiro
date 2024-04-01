@@ -16,8 +16,7 @@ header {
         width: 3.125rem;
         height: 2rem;
         @include maxMobile {
-          width: 2.3rem;
-          height: 1.3rem;
+          scale: 0.75;
         }
       }
       p {
@@ -29,7 +28,7 @@ header {
         margin-bottom: 0;
         @include maxMobile {
           font-size: 1.2rem;
-          margin-left: rem(5);
+          margin-left: 0;
         }
       }
     }

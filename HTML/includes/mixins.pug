@@ -25,6 +25,30 @@ mixin product($imgsrc, $discount, $title, $des, $pAfter, $pBefore)
 
 mixin pageHeader($title)
   .page-header
-    h2 #{$title}
+    img(src="../images/Meubel House_Logos-05.png", alt="alt")
+    h1 #{$title}
     h4 #[a(href="./index.html") Home] #[span &gt;] #[span #{$title}]
     .overlay-header
+
+mixin pros
+  .pros.p-5.d-flex.align-items-center.justify-content-center.gap-4.gap-sm-5.gap-xl-4.flex-wrap
+    .pro.d-flex.align-items-center.gap-2
+      img(src="../images/cupsvg.svg", alt="alt")
+      .text 
+        h5 High Quality
+        p.m-0 crafted from top materials
+    .pro.d-flex.align-items-center.gap-2
+      img(src="../images/warranty.svg", alt="alt")
+      .text 
+        h5 Warranty Protection
+        p.m-0 Over 2 years
+    .pro.d-flex.align-items-center.gap-2
+      img(src="../images/shipping.svg", alt="alt")
+      .text 
+        h5 Free Shipping
+        p.m-0 Order over 150 $
+    .pro.d-flex.align-items-center.gap-2
+      img(src="../images/support.svg", alt="alt")
+      .text 
+        h5 24 / 7 Support
+        p.m-0 Dedicated support
