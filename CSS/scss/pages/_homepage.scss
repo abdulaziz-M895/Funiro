@@ -135,6 +135,23 @@
     flex-wrap: wrap;
     gap: rem(15);
   }
+  .more {
+    display: flex;
+    margin: rem(20) auto;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    color: #b88e2f;
+    border: 2px solid #b88e2f;
+    font-weight: 700;
+    width: rem(245);
+    height: rem(50);
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: #b88e2f;
+    }
+  }
 }
 .beutiful {
   position: relative;

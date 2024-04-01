@@ -10,3 +10,4 @@ products.forEach((product) => {
     overlays.style.opacity = "0";
   });
 });
+

@@ -1,7 +1,6 @@
 @use "../global" as *;
 .product {
-  max-width: calc(95% / 3);
-  min-width: rem(350);
+  width: 18.875rem;
   position: relative;
   @include maxMedium {
     max-width: calc(90% / 3);
@@ -65,23 +64,6 @@
       text-decoration: line-through;
       margin: 0;
       display: inline-block;
-    }
-  }
-  .more {
-    display: flex;
-    margin: rem(20) auto;
-    align-items: center;
-    cursor: pointer;
-    justify-content: center;
-    color: #b88e2f;
-    border: 2px solid #b88e2f;
-    font-weight: 700;
-    width: rem(245);
-    height: rem(50);
-    transition: 0.3s;
-    &:hover {
-      color: white;
-      background-color: #b88e2f;
     }
   }
 }

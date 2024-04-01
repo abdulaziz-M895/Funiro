@@ -14,21 +14,57 @@ block content
             p.m-0 Filter
           img(src="../images/ci_grid-big-round.svg", alt="alt")
           img(src="../images/bi_view-list.svg", alt="alt")
-          p.m-0 Showing 1-16 of 32 results
+          p.m-0 Showing 1-#[span 16] of 32 results
         .show-options.d-flex.align-items-center
           .show-box Show
-            select#show(name="show") 
-              - for(let i = 16; i <= 32; i++)
+            select#show(name="show")
+              - for(let i = 16; i <= 32; i += 4)
                 option(value=`${i}`) #{i}
           .sort.ms-3 Sort By
             select#sort(name="sort")
-              option(value="Default") Default
+              option(value="Default") random
               option(value="highToLow") Price: High to low
               option(value="lowToHigh") Price: Low to high
-    .container
-      .content.d-flex.align-items-center.position-relative.flex-wrap
-        - for(let i = 0; i < 4; i++)
-          +product("../images/image1.png", "new", "Syltherine", "Stylish cafe table set", "EGP 14.000", "none")
-          +product("../images/image2.png", "none", "Liveosa", "Stylish cafe chair", "EGP 1.500", "none")
-          +product("../images/image3.png", "d50", "Lolito", "Luxury big sofa", "EGP 10.000", "EGP 20.000")
-          +product("../images/image4.png", "new", "Respire", "Outdoor bar table and stool", "EGP 28.000", "none")
+    .products
+      .container
+        .content.d-flex.align-items-center.position-relative.flex-wrap
+          - for(let i = 0; i < 2; i++)
+            +product("../images/image1.png", "new", "Syltherine", "Stylish cafe table set", "EGP 14000", "none")
+            +product("../images/image2.png", "none", "Liveosa", "Stylish cafe chair", "EGP 1500", "none")
+            +product("../images/image3.png", "d50", "Lolito", "Luxury big sofa", "EGP 10000", "EGP 20000")
+            +product("../images/image4.png", "new", "Respire", "Outdoor bar table and stool", "EGP 28000", "none")
+            +product("../images/image5.png", "none", "Grifo", "Night Lamp", "EGP 699", "none")
+            +product("../images/image6.png", "new", "Muggo", "Luxury sofa", "EGP 20000", "none")
+            +product("../images/image7.png", "d50", "Pingky", "Light Gray Luxury sofa", "EGP 10500", "EGP 21000")
+            +product("../images/image8.png", "new", "Potty", "Orange Luxury sofa", "EGP 25000", "none")
+    .buttons.p-5 
+      .container.d-flex.align-items-center.justify-content-center.gap-3
+        button.btn.btn-lg.prev Previous
+        button.btn.btn-lg.active 1
+        button.btn.btn-lg 2
+        button.btn.btn-lg 3
+        button.btn.btn-lg.next Next
+    .pros.p-5.d-flex.align-items-center.justify-content-center.gap-4.gap-sm-5.gap-xl-4.flex-wrap
+      .pro.d-flex.align-items-center.gap-2
+        img(src="../images/cupsvg.svg", alt="alt")
+        .text 
+          h5 High Quality
+          p.m-0 crafted from top materials
+      .pro.d-flex.align-items-center.gap-2
+        img(src="../images/warranty.svg", alt="alt")
+        .text 
+          h5 Warranty Protection
+          p.m-0 Over 2 years
+      .pro.d-flex.align-items-center.gap-2
+        img(src="../images/shipping.svg", alt="alt")
+        .text 
+          h5 Free Shipping
+          p.m-0 Order over 150 $
+      .pro.d-flex.align-items-center.gap-2
+        img(src="../images/support.svg", alt="alt")
+        .text 
+          h5 24 / 7 Support
+          p.m-0 Dedicated support
+
+block scripts
+  script(src="../JS/shop.js") 
