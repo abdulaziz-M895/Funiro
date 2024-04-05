@@ -20,7 +20,7 @@
       }
     }
     & > p {
-      border-left: rem(1.5) solid #9f9f9f;
+      border-left: rem(1.5) solidvar(--alt-text);
       padding-left: rem(20);
       height: 100%;
     }

@@ -1,0 +1,42 @@
+@use "../global" as *;
+
+.blogs-page {
+  padding: rem(50) 0 rem(30);
+  .content {
+    aside {
+      width: rem(300);
+      @include maxMobile {
+        display: none;
+      }
+      h3 {
+        margin-bottom: rem(20);
+      }
+      .box {
+        margin-bottom: rem(25);
+        img {
+          width: rem(80);
+          height: rem(80);
+          border-radius: rem(10);
+        }
+        p {
+          margin-bottom: rem(1);
+          font-size: rem(15.5);
+        }
+        span {
+          color: var(--alt-text);
+          font-size: rem(14);
+        }
+      }
+    }
+    section {
+      width: 70%;
+      @include maxMobile {
+        width: 100%;
+      }
+      .two,
+      .three {
+        display: none;
+      }
+    }
+  }
+}

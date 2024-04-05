@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 footer {
-  border-top: 1px solid #9f9f9f;
+  border-top: 1px solidvar(--alt-text);
   margin-top: rem(30);
   .content {
     display: flex;
@@ -14,7 +14,7 @@ footer {
       text-align: center;
     }
     h4 {
-      color: #9f9f9f;
+      color:var(--alt-text);
       font-size: rem(18);
       margin-top: 0;
       width: 100%;
@@ -31,7 +31,7 @@ footer {
         transition: 0.3s;
       }
       p {
-        color: #9f9f9f;
+        color:var(--alt-text);
         line-height: 1.7;
       }
     }
@@ -69,7 +69,7 @@ footer {
         input {
           border: none;
           outline: none;
-          color: #9f9f9f;
+          color:var(--alt-text);
           padding: 7px 0;
           border-bottom: 1px solid black;
           background: white;
@@ -91,7 +91,7 @@ footer {
   }
   .copy {
     padding-top: 20px;
-    border-top: 1px solid #9f9f9f;
+    border-top: 1px solidvar(--alt-text);
     text-align: center;
   }
 }

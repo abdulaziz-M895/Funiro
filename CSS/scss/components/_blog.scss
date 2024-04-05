@@ -1,0 +1,48 @@
+@use "../global" as *;
+
+.blog {
+  &:not(:first-of-type) {
+    margin-top: rem(30);
+  }
+  > img {
+    border-radius: 10px;
+  }
+  .detials {
+    margin-top: rem(15);
+    color: var(--alt-text);
+    font-size: rem(13);
+    @include maxMobile {
+      justify-content: center;
+    }
+  }
+  > h3 {
+    margin-block: rem(20);
+    @include maxMobile {
+      text-align: center;
+    }
+  }
+  > p {
+    color: var(--alt-text);
+    margin: 0;
+    @include maxMobile {
+      text-align: center;
+    }
+  }
+  button {
+    margin-top: rem(20);
+    position: relative;
+    @include maxMobile {
+      margin-left: calc(50% - 55px);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 63%;
+      height: 2px;
+      background-color: #000;
+    }
+  }
+}
