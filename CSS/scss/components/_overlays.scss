@@ -50,3 +50,8 @@
   @include overlay;
   background-color: #ffffffb3;
 }
+.overlay-cart {
+  @include overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 70000;
+}

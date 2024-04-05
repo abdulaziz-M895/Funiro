@@ -11,3 +11,23 @@ products.forEach((product) => {
   });
 });
 
+let cartBtn = document.querySelector("button.navbar-text");
+
+cartBtn.addEventListener("click", function () {
+  let cart = document.querySelector(".cart");
+  cart.style.display = "block";
+
+  let overlay = document.createElement("div");
+  overlay.classList.add("overlay-cart");
+  document.body.append(overlay);
+
+  overlay.addEventListener("click", function () {
+    this.style.display = "none";
+    cart.style.display = "none";
+  });
+  
+  cart.querySelector(".exit").addEventListener("click", function () {
+    overlay.style.display = "none";
+    cart.style.display = "none";
+  })
+});
