@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title><link rel="icon" type="image/png" href="../images/Meubel House_Logos-05.png">
+    <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../../CSS/main.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body class="position-relative"><nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="container">
+<a class="navbar-brand" href="./index.html"><img src="../images/Meubel House_Logos-05.png" alt="alt">
+    <p>Funiro</p></a>
+<button class="navbar-toggler position-relative" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon1"></span>
+<span class="navbar-toggler-icon2"></span>
+<span class="navbar-toggler-icon3"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarText">
+<ul class="navbar-nav mx-auto mb-2 mb-lg-0"><li class="nav-item">
+<a class="nav-link" aria-current="page" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./shop.html">Shop</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./blog.html">Blog</a>
+</li></ul>
+<button type="button" class="navbar-text"><img src="../images/ant-design_shopping-cart-outlined.svg" alt="alt">
+    <p>Cart</p></button>
+</div>
+</div>
+</nav>
+    <div class="cart"> 
+      <div class="haeding"> 
+        <h3>Shopping Cart</h3>
+        <div class="exit"> <img src="../images/bag-x.svg" alt="alt"><img src="../images/x.svg" alt="alt"></div>
+      </div>
+      <div class="items"> 
+        <div class="products"></div>
+        <div class="total d-flex justify-content-between position-relative"><span>Subtotal</span><span>EGP <span>0</span></span></div>
+      </div>
+      <div class="buttons d-flex align-items-center justify-content-center gap-3"><a class="rounded-pill" href="./checkout.html">Checkout</a></div>
+    </div>
+    <div class="page-header"><img src="../images/Meubel House_Logos-05.png" alt="alt"/>
+      <h1>Checkout</h1>
+      <h4><a href="./index.html">Home</a> <span>&gt;</span> <span>Checkout</span></h4>
+      <div class="overlay-header"></div>
+    </div>
+    <div class="checkout-page">
+      <div class="container"> 
+        <div class="content d-flex gap-5">
+          <form action="">
+            <h1>Billing details</h1>
+            <div class="name d-flex align-items-center gap-4">
+              <label class="d-flex flex-column" for="first-name">First Name
+                <input type="text" id="first-name">
+              </label>
+              <label class="d-flex flex-column" for="last-name">Last Name
+                <input type="text" id="last-name">
+              </label>
+            </div>
+            <label class="d-flex flex-column" for="country">Country / Region
+              <input type="text" id="country" list="country-list"><datalist id="country-list">
+<option value="Afghanistan">
+<option value="Algeria">
+<option value="Armenia">
+<option value="Austria">
+<option value="Azerbaijan">
+<option value="Bahrain">
+<option value="Belgium">
+<option value="Bosnia and Herzegovina">
+<option value="Bulgaria">
+<option value="Canada">
+<option value="Croatia">
+<option value="Cyprus">
+<option value="Czechia (Czech Republic)">
+<option value="Denmark">
+<option value="Egypt">
+<option value="Estonia">
+<option value="Finland">
+<option value="France">
+<option value="Georgia">
+<option value="Germany">
+<option value="Greece">
+<option value="Hungary">
+<option value="Iceland">
+<option value="Iran">
+<option value="Iraq">
+<option value="Ireland">
+<option value="Italy">
+<option value="Jordan">
+<option value="Kazakhstan">
+<option value="Kuwait">
+<option value="Kyrgyzstan">
+<option value="Latvia">
+<option value="Lebanon">
+<option value="Liechtenstein">
+<option value="Lithuania">
+<option value="Luxembourg">
+<option value="Malta">
+<option value="Mexico">
+<option value="Monaco">
+<option value="Montenegro">
+<option value="Morocco">
+<option value="Netherlands">
+<option value="North Macedonia (formerly Macedonia)">
+<option value="Norway">
+<option value="Oman">
+<option value="Palestine">
+<option value="Poland">
+<option value="Portugal">
+<option value="Qatar">
+<option value="Romania">
+<option value="Russia">
+<option value="Saudi Arabia">
+<option value="Serbia">
+<option value="Slovakia">
+<option value="Slovenia">
+<option value="Spain">
+<option value="Sweden">
+<option value="Switzerland">
+<option value="Syria">
+<option value="Tajikistan">
+<option value="Turkey">
+<option value="Turkmenistan">
+<option value="Ukraine">
+<option value="United Arab Emirates">
+<option value="United Kingdom">
+<option value="United States of America">
+<option value="Uzbekistan">
+<option value="Yemen">
+</datalist>
+            </label>
+            <label class="d-flex flex-column" for="street">Street Address
+              <input type="text" id="street">
+            </label>
+            <label class="d-flex flex-column" for="City">Town / City
+              <input type="text" id="City">
+            </label>
+            <label class="d-flex flex-column" for="ZIP">ZIP code
+              <input type="text" id="ZIP">
+            </label>
+            <label class="d-flex flex-column" for="phone">Phone
+              <input type="tel" id="phone">
+            </label>
+            <label class="d-flex flex-column" for="email">Email address
+              <input type="email" id="email">
+            </label>
+            <label class="d-flex flex-column" for="more-info">Additional information
+              <textarea name="more-info" id="more-info"></textarea>
+            </label>
+          </form>
+          <div class="finishing"> 
+            <div class="top-part"> 
+              <div class="heading"> 
+                <h3 class="d-flex align-items-center justify-content-between">Product <span>Price</span></h3>
+              </div>
+              <div class="products d-flex align-items-center justify-content-between"><span class="name">Asgaard sofa</span><span class="price">EGP 50000</span></div>
+              <div class="total d-flex align-items-center justify-content-between"><span>Total</span><span>EGP 50000</span></div>
+            </div>
+            <div class="bottom-part"> 
+              <div class="form">
+                <div class="d-flex align-items-center">
+                  <input id="bank" type="radio" name="payment" checked>
+                  <label for="bank">Bank Transfer</label>
+                </div>
+                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                <div class="d-flex align-items-center">
+                  <input id="cash" type="radio" name="payment">
+                  <label for="cash">Cash On Delivery</label>
+                </div>
+              </div>
+              <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span>privacy policy</span>.</p>
+              <button class="btn rounded-pill" type="submit">Place order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pros p-5 d-flex align-items-center justify-content-center gap-4 gap-sm-5 gap-xl-4 flex-wrap">
+      <div class="pro d-flex align-items-center gap-2"><img src="../images/cupsvg.svg" alt="alt"/>
+        <div class="text"> 
+          <h5>High Quality</h5>
+          <p class="m-0">crafted from top materials</p>
+        </div>
+      </div>
+      <div class="pro d-flex align-items-center gap-2"><img src="../images/warranty.svg" alt="alt"/>
+        <div class="text"> 
+          <h5>Warranty Protection</h5>
+          <p class="m-0">Over 2 years</p>
+        </div>
+      </div>
+      <div class="pro d-flex align-items-center gap-2"><img src="../images/shipping.svg" alt="alt"/>
+        <div class="text"> 
+          <h5>Free Shipping</h5>
+          <p class="m-0">Order over 150 $</p>
+        </div>
+      </div>
+      <div class="pro d-flex align-items-center gap-2"><img src="../images/support.svg" alt="alt"/>
+        <div class="text"> 
+          <h5>24 / 7 Support</h5>
+          <p class="m-0">Dedicated support</p>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="container"> 
+        <div class="content"> 
+          <div class="left"> <a href="./index.html">Funiro.</a>
+            <p>400 University Drive Suite 200 Coral</br> Gables,</br>FL 33134 USA</p>
+          </div>
+          <div class="links"> 
+            <h4>Links</h4><a href="./index.html">Home</a><a href="./shop.html">Shop</a><a href="./contact.html">Contact</a><a href="./blog.html">Blog</a>
+          </div>
+          <div class="help"> 
+            <h4>Help </h4><a href="#">Payment Options</a><a href="#">Returns</a><a href="#">Privacy Policies</a>
+          </div>
+          <div class="newsletter"> 
+            <h4>Newslatter</h4>
+            <form action=""> 
+              <input id="email" type="email" name="emial" placeholder="Enter Your Email Address">
+              <button type="button">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="copy"> 
+          <p>2023 Funiro. All rights reverved &copy;</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../JS/bootstrap.bundle.min.js"> </script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/cart.js" defer></script>
+  </body>
+</html>

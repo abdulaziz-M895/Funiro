@@ -1,0 +1,114 @@
+@use "../global" as *;
+
+.cart {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: hsl(0, 0%, 100%);
+  z-index: 700000;
+  width: 400px;
+  padding: 20px;
+  @include maxMedium {
+    width: 100%;
+  }
+  .haeding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 7px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 85%;
+      height: 1px;
+      background-color: #d9d9d9;
+      bottom: 0;
+      left: 0;
+      z-index: 700001;
+    }
+    h3 {
+      font-weight: 600;
+    }
+    img {
+      cursor: pointer;
+    }
+    img:last-of-type {
+      position: absolute;
+      right: 6px;
+      top: 20.5px;
+      z-index: 700001;
+      @include maxMobile {
+        top: 18px;
+      }
+    }
+  }
+  .items {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    .products {
+      height: 400px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .product-cart {
+        margin-bottom: rem(10);
+        img.product-img {
+          width: 80px;
+          border-radius: 15px;
+        }
+        input {
+          width: 40px;
+        }
+        span.name {
+          font-weight: 600;
+        }
+        .amount {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: 600;
+          span.price {
+            color: var(--main-color);
+          }
+        }
+        img.remove {
+          cursor: pointer;
+        }
+      }
+    }
+    .total {
+      padding-block: 7px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 1px;
+        background-color: #d9d9d9;
+        bottom: 0;
+        left: -19.75px;
+        z-index: 700001;
+      }
+      span {
+        font-weight: 600;
+      }
+      span:last-child {
+        color: var(--main-color);
+      }
+    }
+  }
+  .buttons {
+    margin-top: 10px;
+    a {
+      padding: 5px 20px;
+      border: 2px solid #000000;
+      color: #000000;
+      font-size: 14px;
+    }
+  }
+}

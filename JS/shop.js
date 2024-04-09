@@ -181,15 +181,12 @@ function check() {
   if (currentBtn == 1) {
     document.querySelector(".buttons button.prev").classList.add("disabled");
     document.querySelector(".buttons button.next").classList.remove("disabled");
-    console.log("1");
   } else if (currentBtn == 3) {
     document.querySelector(".buttons button.next").classList.add("disabled");
     document.querySelector(".buttons button.prev").classList.remove("disabled");
-    console.log("3");
   } else {
     document.querySelector(".buttons button.prev").classList.remove("disabled");
     document.querySelector(".buttons button.next").classList.remove("disabled");
-    console.log("2");
   }
 }
 

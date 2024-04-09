@@ -1,0 +1,138 @@
+extends ./index
+
+block titleName 
+  title Checkout
+
+block links
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./shop.html">Shop</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./contact.html">Contact</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html">Blog</a>
+  </li>
+
+block content
+  +pageHeader("Checkout")
+  .checkout-page
+    .container 
+      .content.d-flex.gap-5
+        form(action="")
+          h1 Billing details
+          .name.d-flex.align-items-center.gap-4
+            label.d-flex.flex-column(for="first-name") First Name
+              input(type="text" id="first-name")
+            label.d-flex.flex-column(for="last-name") Last Name
+              input(type="text" id="last-name")
+          label.d-flex.flex-column(for="country") Country / Region
+            input(type="text", id="country", list="country-list")
+            <datalist id="country-list">
+              <option value="Afghanistan">
+              <option value="Algeria">
+              <option value="Armenia">
+              <option value="Austria">
+              <option value="Azerbaijan">
+              <option value="Bahrain">
+              <option value="Belgium">
+              <option value="Bosnia and Herzegovina">
+              <option value="Bulgaria">
+              <option value="Canada">
+              <option value="Croatia">
+              <option value="Cyprus">
+              <option value="Czechia (Czech Republic)">
+              <option value="Denmark">
+              <option value="Egypt">
+              <option value="Estonia">
+              <option value="Finland">
+              <option value="France">
+              <option value="Georgia">
+              <option value="Germany">
+              <option value="Greece">
+              <option value="Hungary">
+              <option value="Iceland">
+              <option value="Iran">
+              <option value="Iraq">
+              <option value="Ireland">
+              <option value="Italy">
+              <option value="Jordan">
+              <option value="Kazakhstan">
+              <option value="Kuwait">
+              <option value="Kyrgyzstan">
+              <option value="Latvia">
+              <option value="Lebanon">
+              <option value="Liechtenstein">
+              <option value="Lithuania">
+              <option value="Luxembourg">
+              <option value="Malta">
+              <option value="Mexico">
+              <option value="Monaco">
+              <option value="Montenegro">
+              <option value="Morocco">
+              <option value="Netherlands">
+              <option value="North Macedonia (formerly Macedonia)">
+              <option value="Norway">
+              <option value="Oman">
+              <option value="Palestine">
+              <option value="Poland">
+              <option value="Portugal">
+              <option value="Qatar">
+              <option value="Romania">
+              <option value="Russia">
+              <option value="Saudi Arabia">
+              <option value="Serbia">
+              <option value="Slovakia">
+              <option value="Slovenia">
+              <option value="Spain">
+              <option value="Sweden">
+              <option value="Switzerland">
+              <option value="Syria">
+              <option value="Tajikistan">
+              <option value="Turkey">
+              <option value="Turkmenistan">
+              <option value="Ukraine">
+              <option value="United Arab Emirates">
+              <option value="United Kingdom">
+              <option value="United States of America">
+              <option value="Uzbekistan">
+              <option value="Yemen">
+            </datalist>
+          label.d-flex.flex-column(for="street") Street Address
+            input(type="text", id="street")
+          label.d-flex.flex-column(for="City") Town / City
+            input(type="text", id="City")
+          label.d-flex.flex-column(for="ZIP") ZIP code
+            input(type="text", id="ZIP")
+          label.d-flex.flex-column(for="phone") Phone
+            input(type="tel", id="phone")
+          label.d-flex.flex-column(for="email") Email address
+            input(type="email", id="email")
+          label.d-flex.flex-column(for="more-info") Additional information
+            textarea(name="more-info", id="more-info")
+        .finishing 
+          .top-part 
+            .heading 
+              h3.d-flex.align-items-center.justify-content-between Product #[span Price]
+            .products.d-flex.align-items-center.justify-content-between
+              span.name Asgaard sofa
+              span.price EGP 50000
+            .total.d-flex.align-items-center.justify-content-between
+              span Total
+              span EGP 50000
+          .bottom-part 
+            .form
+              div.d-flex.align-items-center
+                input#bank(type="radio", name="payment", checked)
+                label(for="bank") Bank Transfer
+              p Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+              div.d-flex.align-items-center
+                input#cash(type="radio", name="payment")
+                label(for="cash") Cash On Delivery
+            p Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our #[span privacy policy].
+            button.btn.rounded-pill(type='submit') Place order
+
+  +pros

@@ -59,9 +59,8 @@ html(lang="en")
         .products
         .total.d-flex.justify-content-between.position-relative
           span Subtotal
-          span EGP 100,000
+          span EGP #[span 0]
       .buttons.d-flex.align-items-center.justify-content-center.gap-3
-        a.rounded-pill(href="./cart.html") Cart
         a.rounded-pill(href="./checkout.html") Checkout
     block content
       .discover 
@@ -123,8 +122,8 @@ html(lang="en")
             h4 Links
             a(href="./index.html") Home
             a(href="./shop.html") Shop
-            a(href="./about.html") About
             a(href="./contact.html") Contact
+            a(href="./blog.html") Blog
           .help 
             h4 Help 
             a(href="#") Payment Options
@@ -140,3 +139,4 @@ html(lang="en")
     script(src="../JS/bootstrap.bundle.min.js") 
     script(src="../JS/main.js")
     block scripts
+      script(src="../JS/cart.js", defer)
