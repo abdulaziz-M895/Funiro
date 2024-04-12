@@ -21,10 +21,36 @@
     align-items: center;
     background: #fff;
     color: var(--Primary, #b88e2f);
-    font-size: 1rem;
     font-weight: 600;
     line-height: 150%; /* 24px */
     margin-bottom: rem(15);
+    transition: 0.3s;
+    position: relative;
+    transition: 0.5s;
+    span {
+      position: relative;
+      z-index: 3;
+    }
+    &:active {
+      scale: 0.93;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 100.5%;
+      background-color: #b88e2f;
+      transition: 0.8s;
+    }
+    &.clicked {
+      color: #fff;
+      &::after {
+        width: 100.5%;
+      }
+    }
   }
   .impresions {
     display: flex;

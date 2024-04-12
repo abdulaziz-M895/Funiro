@@ -10,6 +10,7 @@ html(lang="en")
       title Home 
     <link rel="icon" type="image/png" href="../images/Meubel House_Logos-05.png">
     link(rel="stylesheet", href="../../CSS/bootstrap.min.css")
+    link(rel="stylesheet", href="../../CSS/all.min.css")
     link(rel="stylesheet", href="../../CSS/main.css")
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,6 +63,8 @@ html(lang="en")
           span EGP #[span 0]
       .buttons.d-flex.align-items-center.justify-content-center.gap-3
         a.rounded-pill(href="./checkout.html") Checkout
+    .scroll-to-top
+      <i class="fa-solid fa-arrow-up"></i>
     block content
       .discover 
         .box 
@@ -137,6 +140,6 @@ html(lang="en")
         .copy 
           p 2023 Funiro. All rights reverved &copy;
     script(src="../JS/bootstrap.bundle.min.js") 
-    script(src="../JS/main.js")
+    script(src="../JS/all.min.js") 
+    script(src="../JS/main.js", defer)
     block scripts
-      script(src="../JS/cart.js", defer)

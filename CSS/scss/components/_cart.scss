@@ -45,9 +45,6 @@
     }
   }
   .items {
-    &::-webkit-scrollbar {
-      display: none;
-    }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,6 +53,9 @@
       height: 400px;
       overflow-y: scroll;
       overflow-x: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .product-cart {
         margin-bottom: rem(10);
         img.product-img {
@@ -111,4 +111,9 @@
       font-size: 14px;
     }
   }
+}
+
+.cart-opened {
+  height: 100svh;
+  overflow: hidden;
 }
