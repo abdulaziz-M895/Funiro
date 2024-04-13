@@ -131,7 +131,7 @@ function addProductToCart(productNode, item) {
         <span class="price">EGP ${productPrice}</span>
       </div>
     </div>
-    <img class="remove" src="../images/cart-x.svg" alt="alt">
+    <img class="remove" src="images/cart-x.svg" alt="alt">
   `;
 
     product = {
@@ -328,7 +328,7 @@ function addProductToCheckout(item) {
   price.innerHTML = `EGP ${item.productPrice}`;
 
   let remove = document.createElement("img");
-  remove.src = "../images/cart-x.svg";
+  remove.src = "images/cart-x.svg";
 
   remove.addEventListener("click", function () {
     product.remove();
