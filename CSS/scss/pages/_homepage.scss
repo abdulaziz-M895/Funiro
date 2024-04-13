@@ -3,7 +3,7 @@
 @use "../layout" as l;
 
 .discover {
-  background: url(../../../images/background1.png) center center,
+  background: url(../images/background1.png) center center,
     0% 0% / cover no-repeat lightgray;
   position: relative;
   height: rem(717);
@@ -96,7 +96,7 @@
       }
       .img {
         width: 100%;
-        background: url(../../../images/image106.png),
+        background: url(../images/image106.png),
           lightgray 50% / cover no-repeat;
         height: rem(480);
         border-radius: rem(10);
@@ -105,10 +105,10 @@
         background-position: center;
       }
       .img-2 {
-        background-image: url(../../../images/image100.png);
+        background-image: url(../images/image100.png);
       }
       .img-3 {
-        background-image: url(../../../images/image101.png);
+        background-image: url(../images/image101.png);
       }
       p {
         color: var(--Font-Color, #333);
@@ -209,7 +209,7 @@
     .image-1 {
       min-width: rem(404);
       height: rem(562);
-      background-image: url(../../../images/Rectangle1.png);
+      background-image: url(../images/Rectangle1.png);
       background-size: cover;
       background-repeat: no-repeat;
       display: flex;
@@ -228,7 +228,7 @@
       .img {
         width: rem(300);
         height: rem(466);
-        background-image: url(../../../images/Rectangle2.png);
+        background-image: url(../images/Rectangle2.png);
         background-size: cover;
         background-repeat: no-repeat;
       }
@@ -243,7 +243,7 @@
     .image-3 {
       width: rem(80);
       height: rem(466);
-      background-image: url(../../../images/Rectangle3.png);
+      background-image: url(../images/Rectangle3.png);
       background-size: cover;
       background-repeat: no-repeat;
     }
