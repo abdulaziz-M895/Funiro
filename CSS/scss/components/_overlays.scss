@@ -1,0 +1,84 @@
+@use "../global" as *;
+.overlay-main {
+  background: var(--Color-Gray-1, #3a3a3abd);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  z-index: -1;
+  .button {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 85%;
+    height: rem(48);
+    align-items: center;
+    background: #fff;
+    color: var(--Primary, #b88e2f);
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    margin-bottom: rem(15);
+    transition: 0.3s;
+    position: relative;
+    transition: 0.5s;
+    span {
+      position: relative;
+      z-index: 3;
+    }
+    &:active {
+      scale: 0.93;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 100.5%;
+      background-color: #b88e2f;
+      transition: 0.8s;
+    }
+    &.clicked {
+      color: #fff;
+      &::after {
+        width: 100.5%;
+      }
+    }
+  }
+  .impresions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+    color: white;
+    div {
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      display: flex;
+      align-items: center;
+      img {
+        width: 1rem;
+        height: 1rem;
+        margin-left: rem(6);
+      }
+    }
+  }
+}
+.overlay-header {
+  @include overlay;
+  background-color: #ffffffb3;
+}
+.overlay-cart {
+  @include overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 70000;
+}

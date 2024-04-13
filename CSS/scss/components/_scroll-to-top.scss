@@ -1,0 +1,28 @@
+@use "../global" as *;
+
+.scroll-to-top {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  position: fixed;
+  bottom: 10px;
+  right: -70px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  @include maxMobile {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  &.show {
+    right: 10px;
+  }
+}

@@ -1,0 +1,276 @@
+@use "../global" as *;
+@use "../components" as c;
+@use "../layout" as l;
+
+.discover {
+  background: url(../../../images/background1.png) center center,
+    0% 0% / cover no-repeat lightgray;
+  position: relative;
+  height: rem(717);
+  .box {
+    position: absolute;
+    padding: rem(30);
+    top: 50%;
+    right: rem(20);
+    transform: translate(0, -50%);
+    background-color: #fff3e3;
+    border-radius: rem(10);
+    width: rem(550);
+    z-index: 2;
+    @include maxMobile {
+      padding: rem(20);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(315);
+    }
+    p.new {
+      color: #333;
+      font-weight: 600;
+      letter-spacing: rem(3);
+      margin-left: rem(10);
+      margin-bottom: rem(5);
+    }
+    h1 {
+      color: var(--Primary, #b88e2f);
+      font-size: rem(52);
+      font-weight: 700;
+      line-height: rem(65);
+      max-width: rem(400);
+      margin: 0 0 rem(15) rem(8);
+      @include maxMobile {
+        font-size: rem(40);
+        line-height: rem(50);
+      }
+    }
+    p.lorem {
+      color: #333;
+      font-size: rem(18);
+      font-weight: 500;
+      line-height: rem(24);
+      margin: 0 0 0 rem(10);
+    }
+  }
+}
+.browse {
+  .browse-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: var(--Font-Color, #333);
+      font-size: rem(32);
+      font-weight: 700;
+      margin: rem(40) 0 0;
+      @include maxMobile {
+        font-size: rem(30);
+      }
+    }
+    p {
+      color: var(--Font-Color1, #666);
+      text-align: center;
+      font-size: rem(20);
+      font-weight: 400;
+      margin-bottom: rem(30);
+      @include maxMobile {
+        font-size: rem(15);
+      }
+    }
+  }
+  .browse-main {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    @include maxMobile {
+      flex-direction: column;
+    }
+    .browse-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(20);
+      margin: auto;
+      width: calc(90% / 3);
+      @include maxMobile {
+        width: 96%;
+      }
+      .img {
+        width: 100%;
+        background: url(../../../images/image106.png),
+          lightgray 50% / cover no-repeat;
+        height: rem(480);
+        border-radius: rem(10);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .img-2 {
+        background-image: url(../../../images/image100.png);
+      }
+      .img-3 {
+        background-image: url(../../../images/image101.png);
+      }
+      p {
+        color: var(--Font-Color, #333);
+        text-align: center;
+        font-size: rem(24);
+        font-weight: 600;
+      }
+    }
+  }
+}
+.products {
+  position: relative;
+  h1 {
+    color: var(--Color-Gray-1, #3a3a3a);
+    text-align: center;
+    font-size: rem(40);
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(15);
+  }
+  .more {
+    display: flex;
+    margin: rem(20) auto;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    color: #b88e2f;
+    border: 2px solid #b88e2f;
+    font-weight: 700;
+    width: rem(245);
+    height: rem(50);
+    transition: 0.3s;
+    &:hover {
+      color: white;
+      background-color: #b88e2f;
+    }
+  }
+}
+.beutiful {
+  position: relative;
+  padding: rem(40) 0;
+  background-color: #fcf8f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(30);
+  @include maxMobile {
+    flex-direction: column;
+  }
+  .text {
+    width: rem(500);
+    margin: 0 0 0 rem(70);
+    display: flex;
+    flex-direction: column;
+    @include maxMobile {
+      width: rem(360);
+      margin: auto;
+      align-items: center;
+      text-align: center;
+    }
+    h1 {
+      color: var(--Color-Gray-1, #3a3a3a);
+      font-size: rem(40);
+      font-weight: 700;
+      line-height: 120%; /* 48px */
+      margin: 0;
+      @include maxMobile {
+        font-size: rem(37);
+      }
+    }
+    p {
+      color: var(--Color-Gray-2, #616161);
+      font-weight: 500;
+      line-height: 150%; /* 24px */
+      @include maxMobile {
+        font-size: rem(15.5);
+      }
+    }
+    a {
+      @include maxMobile {
+        margin: rem(10) auto 0;
+      }
+    }
+  }
+  .images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 75%;
+    gap: rem(15);
+    overflow: hidden;
+    .image-1 {
+      min-width: rem(404);
+      height: rem(562);
+      background-image: url(../../../images/Rectangle1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-grow: 1;
+    }
+    .image-2-con {
+      height: rem(562);
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include maxMedium {
+        display: none;
+      }
+      .img {
+        width: rem(300);
+        height: rem(466);
+        background-image: url(../../../images/Rectangle2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .ellipses {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(10);
+        margin-bottom: rem(20);
+      }
+    }
+    .image-3 {
+      width: rem(80);
+      height: rem(466);
+      background-image: url(../../../images/Rectangle3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.funiro-hash {
+  padding: rem(25) 0;
+  h2 {
+    color: var(--Color-Gray-2, #616161);
+    margin-bottom: rem(5);
+    text-align: center;
+    font-size: rem(20);
+    font-weight: 600;
+    line-height: 150%;
+    @include maxMobile {
+      font-size: 0.85rem;
+    }
+  }
+  h1 {
+    color: var(--Color-Gray-1, #3a3a3a);
+    margin-top: 0;
+    text-align: center;
+    font-size: rem(40);
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+    @include maxMobile {
+      font-size: 1.7rem;
+    }
+  }
+}

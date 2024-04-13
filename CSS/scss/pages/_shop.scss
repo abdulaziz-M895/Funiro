@@ -1,0 +1,63 @@
+@use "../global" as *;
+.options {
+  background-color: #f9f1e7;
+  padding: rem(25) 0;
+  .container {
+    @include maxMedium {
+      justify-content: center !important;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  .filter-options {
+    @include maxMobile {
+      gap: 0.7rem !important;
+    }
+    .filter {
+      margin-left: rem(27);
+      p {
+        font-size: rem(18);
+      }
+    }
+    & > p {
+      border-left: rem(1.5) solidvar(--alt-text);
+      padding-left: rem(20);
+      height: 100%;
+    }
+  }
+  .show-options {
+    select {
+      border: 1px solid black;
+      outline: none;
+      background-color: var(--alt-color);
+    }
+  }
+}
+.shop-products {
+  .content {
+    margin-top: rem(20);
+    justify-content: center;
+    gap: rem(15);
+  }
+}
+.buttons {
+  .container {
+    @include maxMedium {
+      gap: 0.5rem !important;
+    }
+    button {
+      background-color: var(--alt-color) !important;
+      border: none;
+      padding-inline: rem(20);
+      @include maxMobile {
+        font-size: rem(18);
+        padding-inline: 1rem;
+      }
+      &.active {
+        background-color: var(--main-color) !important;
+        color: white;
+        pointer-events: none;
+      }
+    }
+  }
+}

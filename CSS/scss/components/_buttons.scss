@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+a.main-button,
+button.main-button {
+  display: inline-flex;
+  padding: rem(25) rem(72);
+  align-items: flex-start;
+  gap: rem(10);
+  background: var(--Primary, #b88e2f);
+  margin: rem(25) 0 0 rem(10);
+  cursor: pointer;
+  border: none;
+  color: white;
+  width: fit-content;
+  font-weight: 700;
+  p {
+    margin: 0;
+  }
+}

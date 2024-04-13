@@ -1,0 +1,19 @@
+@use "variabels" as *;
+html {
+  font-size: 100%;
+}
+body {
+  font-family: $poppins;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+a:active,
+a:focus,
+a:visited {
+  border: none;
+  outline: none;
+}
