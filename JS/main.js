@@ -167,7 +167,7 @@ function addProductToCart(productNode, item) {
         <span class="price">EGP ${item.productPrice}</span>
       </div>
     </div>
-    <img class="remove" src="../images/cart-x.svg" alt="alt">
+    <img class="remove" src="images/cart-x.svg" alt="alt">
   `;
 
     let allProducts = document.querySelectorAll(".product");
