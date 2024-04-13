@@ -329,6 +329,7 @@ function addProductToCheckout(item) {
 
   let remove = document.createElement("img");
   remove.src = "images/cart-x.svg";
+  remove.className = "remove";
 
   remove.addEventListener("click", function () {
     product.remove();
