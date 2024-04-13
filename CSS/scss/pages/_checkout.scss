@@ -93,7 +93,8 @@
                 position: absolute;
                 width: 15px;
                 height: 15px;
-                top: -8px;
+                top: 50%;
+                transform: translateY(-50%);
                 left: -2px;
                 border-radius: 50%;
                 border: 2px solid #000000;
