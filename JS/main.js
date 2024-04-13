@@ -1,3 +1,4 @@
+// Products Hover Effect
 let products = document.querySelectorAll(".product");
 if (products) {
   products.forEach((product) => {
@@ -15,23 +16,24 @@ if (products) {
   });
 }
 
+// Show/Hide Cart
 let cartBtn = document.querySelector("button.navbar-text");
 cartBtn.addEventListener("click", function () {
   let cart = document.querySelector(".cart");
   cart.style.display = "block";
 
   document.body.classList.add("cart-opened");
-  
+
   let overlay = document.createElement("div");
   overlay.classList.add("overlay-cart");
   document.body.append(overlay);
-  
+
   overlay.addEventListener("click", function () {
     this.style.display = "none";
     cart.style.display = "none";
     document.body.classList.remove("cart-opened");
   });
-  
+
   cart.querySelector(".exit").addEventListener("click", function () {
     overlay.style.display = "none";
     cart.style.display = "none";
@@ -39,6 +41,7 @@ cartBtn.addEventListener("click", function () {
   });
 });
 
+// Cart Logic
 document.addEventListener("DOMContentLoaded", function () {
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -46,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   cartItems.forEach((item) => {
     if (item != {}) {
       addProductToCart(0, item);
+      addProductToCheckout(item);
     }
   });
 
@@ -72,6 +76,34 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCartTotal();
     }
   });
+
+  let placeOrder = document.querySelector(".place-order");
+  let thankContainer = document.querySelector(".bottom-part .thank-con");
+  let message = document.createElement("p");
+
+  if (placeOrder) {
+    placeOrder.addEventListener("click", function () {
+      message.className = "thank-you";
+      message.textContent =
+        "Thanks for choosing us for your furniture needs! We're excited to help you transform your space.";
+
+      // Check if thankContainer has child nodes before appending the message
+      if (
+        !thankContainer.hasChildNodes() &&
+        document.querySelector(".top-part .products").hasChildNodes()
+      ) {
+        thankContainer.append(message);
+      } else if (
+        !thankContainer.hasChildNodes() &&
+        !document.querySelector(".top-part .products").hasChildNodes()
+      ) {
+        message.textContent = "Your Cart Is Empty";
+        thankContainer.append(message);
+      }
+
+      emptyCart();
+    });
+  }
 });
 
 function addProductToCart(productNode, item) {
@@ -203,6 +235,12 @@ function updateCartTotal() {
   });
 
   document.querySelector(".cart .total span span").innerHTML = total;
+
+  if (document.querySelector(".checkout-page .top-part .total span span")) {
+    document.querySelector(
+      ".checkout-page .top-part .total span span"
+    ).innerHTML = total;
+  }
 }
 updateCartTotal();
 
@@ -226,6 +264,14 @@ function removeCartItem() {
           button.classList.remove("clicked");
         }
       });
+
+      document
+        .querySelectorAll(".checkout-page .top-part .products .product-check")
+        .forEach((product) => {
+          if (product.children[0].textContent == productName) {
+            product.remove();
+          }
+        });
     });
   });
 }
@@ -249,6 +295,7 @@ function amountChanged() {
   });
 }
 
+// Scroll To Top Button
 let upBtn = document.querySelector(".scroll-to-top");
 upBtn.addEventListener("click", function () {
   document.querySelector("nav").scrollIntoView();
@@ -261,3 +308,51 @@ window.onscroll = function () {
     upBtn.classList.remove("show");
   }
 };
+
+// Checkout logic
+function addProductToCheckout(item) {
+  let product = document.createElement("div");
+  product.classList.add(
+    "product-check",
+    "d-flex",
+    "align-items-center",
+    "justify-content-between"
+  );
+
+  let name = document.createElement("span");
+  name.classList.add("name");
+  name.innerHTML = item.productName;
+
+  let price = document.createElement("span");
+  price.classList.add("price");
+  price.innerHTML = `EGP ${item.productPrice}`;
+
+  let remove = document.createElement("img");
+  remove.src = "../images/cart-x.svg";
+
+  remove.addEventListener("click", function () {
+    product.remove();
+    document.querySelectorAll("img.remove").forEach((img) => {
+      if (
+        img.parentElement.querySelector(".name").textContent == name.textContent
+      ) {
+        img.click();
+      }
+    });
+  });
+
+  price.append(remove);
+  product.append(name);
+  product.append(price);
+  if (document.querySelector(".checkout-page .top-part .products")) {
+    document
+      .querySelector(".checkout-page .top-part .products")
+      .append(product);
+  }
+}
+
+function emptyCart() {
+  document.querySelectorAll("img.remove").forEach((img) => {
+    img.click();
+  });
+}

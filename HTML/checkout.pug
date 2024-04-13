@@ -117,12 +117,10 @@ block content
           .top-part 
             .heading 
               h3.d-flex.align-items-center.justify-content-between Product #[span Price]
-            .products.d-flex.align-items-center.justify-content-between
-              span.name Asgaard sofa
-              span.price EGP 50000
+            .products
             .total.d-flex.align-items-center.justify-content-between
               span Total
-              span EGP 50000
+              span EGP #[span ]
           .bottom-part 
             .form
               div.d-flex.align-items-center
@@ -133,6 +131,7 @@ block content
                 input#cash(type="radio", name="payment")
                 label(for="cash") Cash On Delivery
             p Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our #[span privacy policy].
-            button.btn.rounded-pill(type='submit') Place order
+            button.btn.rounded-pill.place-order(type='submit') Place order
+            .thank-con
 
   +pros

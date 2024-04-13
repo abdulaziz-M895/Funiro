@@ -15,6 +15,9 @@
       .name {
         label {
           width: 50%;
+          @include maxMobile {
+            width: 47%;
+          }
         }
       }
       label {
@@ -47,9 +50,15 @@
         > div {
           margin-top: rem(10);
           &.products {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
             font-weight: 500;
             span:first-of-type {
               color: var(--alt-text);
+            }
+            img {
+              margin-left: 0.5rem;
             }
           }
           &.total {
@@ -117,6 +126,13 @@
           font-size: rem(20);
           margin-top: rem(20);
           margin-left: calc(50% - 103.5px);
+        }
+        .thank-con {
+          max-width: 80%;
+          margin: rem(30) auto 0;
+          text-align: center;
+          font-weight: 600;
+          color: var(--main-color);
         }
       }
     }
