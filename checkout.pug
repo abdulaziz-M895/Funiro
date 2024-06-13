@@ -26,11 +26,11 @@ block content
           h1 Billing details
           .name.d-flex.align-items-center.gap-4
             label.d-flex.flex-column(for="first-name") First Name
-              input(type="text" id="first-name")
+              input(type="text" id="first-name" required)
             label.d-flex.flex-column(for="last-name") Last Name
-              input(type="text" id="last-name")
+              input(type="text" id="last-name" required)
           label.d-flex.flex-column(for="country") Country / Region
-            input(type="text", id="country", list="country-list")
+            input(type="text", id="country", list="country-list" required)
             <datalist id="country-list">
               <option value="Afghanistan">
               <option value="Algeria">
@@ -102,15 +102,15 @@ block content
               <option value="Yemen">
             </datalist>
           label.d-flex.flex-column(for="street") Street Address
-            input(type="text", id="street")
+            input(type="text", id="street" required)
           label.d-flex.flex-column(for="City") Town / City
-            input(type="text", id="City")
+            input(type="text", id="City" required)
           label.d-flex.flex-column(for="ZIP") ZIP code
-            input(type="text", id="ZIP")
+            input(type="text", id="ZIP" required)
           label.d-flex.flex-column(for="phone") Phone
-            input(type="tel", id="phone")
+            input(type="tel", id="phone" required)
           label.d-flex.flex-column(for="email") Email address
-            input(type="email", id="email")
+            input(type="email", id="email" required)
           label.d-flex.flex-column(for="more-info") Additional information
             textarea(name="more-info", id="more-info")
         .finishing 
